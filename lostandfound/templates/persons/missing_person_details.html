@@ -1,0 +1,42 @@
+{% load i18n %}
+<center>
+    <h2>{% trans "Details for" %} {{missingperson.mp_name}}</h2><br>
+
+    {% if missing_person_images %}
+        {% for image in missing_person_images %}
+            <div class="image-item">
+                <img src="/media/{{ image.image_path }}" alt="missing_person_image" width="150">
+            </div>
+        {% empty %}
+
+        {% endfor %}
+    {% else %}
+        <p>No images for {{missingperson.mp_name}}</p>
+    {% endif %}
+
+    <p>{% trans "AGE RANGE" %}: {{ missingperson.age_range }}</p>
+    <p>{% trans "HEIGHT" %}: {{ missingperson.height }}</p>
+    <p>{% trans "BODY BUILD" %}: {{ missingperson.body_build }}</p>
+    <p>{% trans "SKIN COLOUR" %}: {{ missingperson.skin_color }}</p>
+    <p>{% trans "RACE" %}: {{ missingperson.race }}</p>
+    <p>{% trans "LAST SEEN" %}: {{ missingperson.last_seen_location }} on {{ missingperson.last_seen_date }}</p>
+    <p>{% trans "SPOKEN LANGUAGES" %}:</p>
+    <ul>
+        {% for lang in missingperson.spoken_languages.all %}
+            <li>{{ lang.spoken_language_name }}</li>
+        {% empty %}
+            <li>No langs</li>
+        {% endfor %}
+    </ul>
+    <p> {% trans "DISTINGUISHING FEATURES" %}:</p>
+    <ul>
+        {% for feat in missingperson.distinguishing_features.all %}
+            <li>{{ feat.distinguishing_feature_name }}</li>
+        {% empty %}
+            <li>No feats</li>
+        {% endfor %}
+    </ul>
+    <p>{% trans "AOB" %}</p>
+    <P>{{ missingperson.other_descriptions }}</P>
+    
+</center>

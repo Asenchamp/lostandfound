@@ -1,0 +1,45 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title><h3>{% if object %} {% trans "Edit" %} {% else %} {% trans "Add" %} {% endif %} {% trans "Person" %}</h3></title>
+    {{ form.media.css }}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <center>
+        <h3>{% if object %} {% trans "Edit" %} {% else %} {% trans "Add" %} {% endif %} {% trans "Person" %}</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <h2>{% trans "Images" %}</h2>
+            {% if missing_person_images %}
+                {% for image in missing_person_images %}
+                    <div class="image-item">
+                        <img src="/media/{{ image.image_path }}" alt="missing_person_image" width="150">
+                        <label>
+                            <input type="checkbox" name="delete_images" value="{{ image.id }}"> {% trans "Delete" %}
+                        </label>
+                    </div>
+                {% empty %}
+
+                {% endfor %}
+            {% endif %}
+
+                <p>
+                    <input type="file" name="images" id="images" multiple>
+                </p>
+
+
+            <input type="submit" value="{% if object %} Edit {% else %} Add {% endif %}">
+        </form>
+    </center>
+
+    {{ form.media.js }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+</body>
+</html>

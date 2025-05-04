@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    {{ form.media.css }}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create">
+    </form>
+
+    {{ form.media.js }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        // Initialize all select2 inputs
+        $('.django-select2').select2();
+        
+        // Auto-fill location when county is selected
+        $('#id_county').on('select2:select', function (e) {
+            const countyId = e.params.data.id;
+            fetch(`/location/${countyId}/`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.location) {
+                        $('#id_location').val(data.location);
+                    }
+                });
+        });
+    });
+    </script>
+</body>
+</html>

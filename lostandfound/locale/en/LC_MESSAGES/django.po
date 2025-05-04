@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-04 13:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\base\dashboaard.html:3
+msgid "HOME"
+msgstr "HOME"
+
+#: .\templates\base\dashboaard.html:5
+msgid "Hi"
+msgstr "Hi"
+
+#: .\templates\base\dashboaard.html:6
+msgid "Add Missing Person"
+msgstr "Add Missing Person"
+
+#: .\templates\base\dashboaard.html:11 .\templates\base\landing.html:142
+msgid "Name"
+msgstr "Name"
+
+#: .\templates\base\dashboaard.html:12 .\templates\base\dashboaard.html:22
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Edit"
+msgstr "Edit"
+
+#: .\templates\base\dashboaard.html:13 .\templates\base\dashboaard.html:23
+msgid "Details"
+msgstr "Details"
+
+#: .\templates\base\dashboaard.html:14 .\templates\base\dashboaard.html:24
+#: .\templates\persons\missing_person_form.html:23
+msgid "Delete"
+msgstr "Delete"
+
+#: .\templates\base\landing.html:39
+msgid "WELCOME TO LOST & FOUND"
+msgstr "WELCOME TO LOST & FOUND"
+
+#: .\templates\base\landing.html:45
+msgid "Search"
+msgstr "Search"
+
+#: .\templates\base\landing.html:51
+msgid "Age Filter"
+msgstr "Age Filter"
+
+#: .\templates\base\landing.html:53
+msgid "INFANTS"
+msgstr "INFANTS"
+
+#: .\templates\base\landing.html:54
+msgid "TODDLER"
+msgstr "TODDLER"
+
+#: .\templates\base\landing.html:55
+msgid "CHILDHOOD"
+msgstr "CHILDHOOD"
+
+#: .\templates\base\landing.html:56
+msgid "TEENAGER"
+msgstr "TEENAGER"
+
+#: .\templates\base\landing.html:57
+msgid "IN 20'S"
+msgstr "IN 20'S"
+
+#: .\templates\base\landing.html:58
+msgid "IN 30'S"
+msgstr "IN 30'S"
+
+#: .\templates\base\landing.html:59
+msgid "IN 40'S"
+msgstr "IN 40'S"
+
+#: .\templates\base\landing.html:60
+msgid "SENIOR"
+msgstr "SENIOR"
+
+#: .\templates\base\landing.html:65
+#, fuzzy
+#| msgid "Age Filter"
+msgid "Body Filter"
+msgstr "Age Filter"
+
+#: .\templates\base\landing.html:67
+msgid "SLENDER"
+msgstr "SLENDER"
+
+#: .\templates\base\landing.html:68
+msgid "MUSCULAR"
+msgstr "MUSCULAR"
+
+#: .\templates\base\landing.html:69
+msgid "AVERAGE"
+msgstr "AVERAGE"
+
+#: .\templates\base\landing.html:74
+msgid "Skin Color Filter"
+msgstr "Skin Color Filter"
+
+#: .\templates\base\landing.html:76
+msgid "DARK"
+msgstr "DARK"
+
+#: .\templates\base\landing.html:77
+msgid "CHOCOLATE"
+msgstr "CHOCOLATE"
+
+#: .\templates\base\landing.html:78
+msgid "LIGHT SKIN"
+msgstr "LIGHT SKIN"
+
+#: .\templates\base\landing.html:79
+msgid "WHITE"
+msgstr "WHITE"
+
+#: .\templates\base\landing.html:100
+msgid "hello"
+msgstr "hello"
+
+#: .\templates\base\landing.html:102
+msgid "you are"
+msgstr "you are"
+
+#: .\templates\base\landing.html:104
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\templates\base\landing.html:114
+msgid "SIGNUP"
+msgstr "SIGNUP"
+
+#: .\templates\base\landing.html:118
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: .\templates\base\landing.html:130
+msgid "MISSING PEOPLE"
+msgstr "MISSING PEOPLE"
+
+#: .\templates\persons\missing_person_details.html:3
+msgid "Details for"
+msgstr "Details for"
+
+#: .\templates\persons\missing_person_details.html:17
+msgid "AGE RANGE"
+msgstr "AGE RANGE"
+
+#: .\templates\persons\missing_person_details.html:18
+msgid "HEIGHT"
+msgstr "HEIGHT"
+
+#: .\templates\persons\missing_person_details.html:19
+msgid "BODY BUILD"
+msgstr "BODY BUILD"
+
+#: .\templates\persons\missing_person_details.html:20
+msgid "SKIN COLOUR"
+msgstr "SKIN COLOUR"
+
+#: .\templates\persons\missing_person_details.html:21
+msgid "RACE"
+msgstr "RACE"
+
+#: .\templates\persons\missing_person_details.html:22
+msgid "LAST SEEN"
+msgstr "LAST SEEN"
+
+#: .\templates\persons\missing_person_details.html:23
+msgid "SPOKEN LANGUAGES"
+msgstr "SPOKEN LANGUAGES"
+
+#: .\templates\persons\missing_person_details.html:31
+msgid "DISTINGUISHING FEATURES"
+msgstr "DISTINGUISHING FEATURES"
+
+#: .\templates\persons\missing_person_details.html:39
+msgid "AOB"
+msgstr "AOB"
+
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Add"
+msgstr "Add"
+
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Person"
+msgstr "Person"
+
+#: .\templates\persons\missing_person_form.html:17
+msgid "Images"
+msgstr "Images"

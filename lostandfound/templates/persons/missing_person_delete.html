@@ -1,0 +1,11 @@
+
+<center>
+    <h3>Please help answer a few questions</h3>
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Yes delete">
+        <a href="{% url 'dashboard' %}"></a>`
+    </form>
+</center>

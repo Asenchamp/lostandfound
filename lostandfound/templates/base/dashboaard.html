@@ -1,0 +1,31 @@
+
+{% load i18n %}
+<h4><a href="/">{% trans "HOME" %}</a></h4>
+<center>
+    <h2>{% trans "Hi" %} {{ request.user.username }}</h2>
+    <a href="{% url 'addMP' %}"> {% trans "Add Missing Person" %}</a>
+    <br><br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>{% trans "Name" %}</th>
+                <th>{% trans "Edit" %}</th>
+                <th>{% trans "Details" %}</th>
+                <th>{% trans "Delete" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if missingperson %}
+                {% for mp in missingperson %}
+                    <tr>
+                        <td>{{ mp.mp_name }}</td>
+                        <td><a href="{% url 'editMP' mp.id %}"> {% trans "Edit" %} </a></td>
+                        <td><a href="{% url 'detailsMP' mp.id %}"> {% trans "Details" %} </a></td>
+                        <td><a href="{% url 'deleteMP' mp.id %}"> {% trans "Delete" %} </a></td>
+                    </tr>                    
+                {% endfor %}
+            {% endif %}
+
+        </tbody>
+    </table>
+</center>

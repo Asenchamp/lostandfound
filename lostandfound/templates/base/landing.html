@@ -1,0 +1,149 @@
+{% load dict_filters %}
+
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lost&found</title>
+    <style>
+        .dropbtn{
+            background-color: #04AA;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0, 0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content{display: block;}
+
+        .dropdown:hover .dropbtn{background-color: #3e8e41;}
+    </style>
+</head>
+<body>
+    <center><h1>{% trans "WELCOME TO LOST & FOUND" %}</h1></center>
+    <center>
+        <form method="post" action="{% url 'landing' %}" enctype="multipart/form-data" class="search-form">
+            {% csrf_token %}
+            <input type="file" name="search_image" accept="image/*">
+            <input type="text" name="search" id="search" placeholder="Search for name, location, height, race, languages..." value="{{ search_query }}">
+            <button type="submit">{% trans "Search" %}</button>
+        </form>
+        <br>
+    </center>
+    <center>
+        <div class="dropdown">
+            <button class="dropbtn">{% trans "Age Filter" %}</button>
+            <div class="dropdown-content">
+                <a href="{% url 'landing' %}?age_filter=infants" class="filter-link {% if age_filter == 'infants' %}active{% endif %}">{% trans "INFANTS" %}</a>
+                <a href="{% url 'landing' %}?age_filter=toddler" class="filter-link {% if age_filter == 'toddler' %}active{% endif %}">{% trans "TODDLER" %}</a>
+                <a href="{% url 'landing' %}?age_filter=childhood" class="filter-link {% if age_filter == 'childhood' %}active{% endif %}">{% trans "CHILDHOOD" %}</a>
+                <a href="{% url 'landing' %}?age_filter=teenage" class="filter-link {% if age_filter == 'teenage' %}active{% endif %}">{% trans "TEENAGER" %}</a>
+                <a href="{% url 'landing' %}?age_filter=in thier 20s" class="filter-link {% if age_filter == 'in thier 20s' %}active{% endif %}">{% trans "IN 20'S" %}</a>
+                <a href="{% url 'landing' %}?age_filter=in thier 30s" class="filter-link {% if age_filter == 'in thier 30s' %}active{% endif %}">{% trans "IN 30'S" %}</a>
+                <a href="{% url 'landing' %}?age_filter=in thier 40s" class="filter-link {% if age_filter == 'in thier 40s' %}active{% endif %}">{% trans "IN 40'S" %}</a>
+                <a href="{% url 'landing' %}?age_filter=Senior" class="filter-link {% if age_filter == 'Senior' %}active{% endif %}">{% trans "SENIOR" %}</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">{% trans "Body Filter" %}</button>
+            <div class="dropdown-content">
+                <a href="{% url 'landing' %}?body_build_filter=Slender" class="filter-link {% if body_build_filter == 'Slender' %}active{% endif %}">{% trans "SLENDER" %}</a>
+                <a href="{% url 'landing' %}?body_build_filter=Muscular" class="filter-link {% if body_build_filter == 'Muscular' %}active{% endif %}">{% trans "MUSCULAR" %}</a>
+                <a href="{% url 'landing' %}?body_build_filter=Average" class="filter-link {% if body_build_filter == 'Average' %}active{% endif %}"> {% trans "AVERAGE" %}</a>                
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">{% trans "Skin Color Filter" %}</button>
+            <div class="dropdown-content">
+                <a href="{% url 'landing' %}?skin_color_filter=Dark" class="filter-link {% if skin_color_filter == 'Dark' %}active{% endif %}">{% trans "DARK" %}</a>
+                <a href="{% url 'landing' %}?skin_color_filter=Chocolate" class="filter-link {% if skin_color_filter == 'Chocolate' %}active{% endif %}">{% trans "CHOCOLATE" %}</a>
+                <a href="{% url 'landing' %}?skin_color_filter=Lightskin" class="filter-link {% if skin_color_filter == 'Lightskin' %}active{% endif %}">{% trans "LIGHT SKIN" %}</a>
+                <a href="{% url 'landing' %}?skin_color_filter=White" class="filter-link {% if skin_color_filter == 'White' %}active{% endif %}">{% trans "WHITE" %}</a>                
+            </div>
+        </div>
+
+        <!-- templates/language_switcher.html -->
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <select name="language" onchange="this.form.submit()">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% for code, name in LANGUAGES %}
+                    <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>
+                        {{ name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </center>
+    <center>
+        <div>
+            {% if user.is_authenticated %}
+                <p>{% trans "hello" %} {{user.username}}!!</p>
+                {% if user.is_authority %}
+                    <p> {% trans "you are" %} {{user.get_authority_type}} ID: {{user.get_authority_id}}</p>
+                    <p>
+                        <a href="{% url 'dashboard' %}">{% trans "Dashboard" %}</a>
+                    </p>
+                {% else %}
+                    <p>you are a regular user</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </center>
+
+    <p>
+        <a href="{% url 'register' %}">{% trans "SIGNUP" %}</a>
+    </p>
+
+    <p>
+        <a href="{% url 'login' %}">{% trans "LOGIN" %}</a>
+    </p>
+
+    <p>
+        <form method="POST" action="{% url 'logout' %}">
+
+            {% csrf_token %}
+            <input type="submit" value="LOGOUT">
+        
+        </form>
+    </p>
+    <center>
+        <h4><strong>{% trans "MISSING PEOPLE" %}</strong></h4>
+        {% if missingperson %}
+            {% for mp in missingperson %}
+                {% with img=missing_person_images|get_item:mp.id %}
+                    {% if img %}
+                        <a href="{% url 'detailsMP' mp.id %}">
+                            <img src="/media/{{ img.image_path }}" alt="missing_person_image" width="150">
+                        </a>
+                    {% else %}
+                        <p>No image available</p>
+                    {% endif %}
+                {% endwith %}
+                <p>{% trans "Name" %}: {{ mp.mp_name }}</p>
+            {% endfor %}
+        {% endif %}
+    </center>
+
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-04 13:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\base\dashboaard.html:3
+msgid "HOME"
+msgstr "EWATANDIKILWA"
+
+#: .\templates\base\dashboaard.html:5
+msgid "Hi"
+msgstr "Gyebaleko"
+
+#: .\templates\base\dashboaard.html:6
+msgid "Add Missing Person"
+msgstr "Gatako Omuntu Abuze"
+
+#: .\templates\base\dashboaard.html:11 .\templates\base\landing.html:142
+msgid "Name"
+msgstr "Erinya"
+
+#: .\templates\base\dashboaard.html:12 .\templates\base\dashboaard.html:22
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Edit"
+msgstr "Kyusamu"
+
+#: .\templates\base\dashboaard.html:13 .\templates\base\dashboaard.html:23
+msgid "Details"
+msgstr "Ebisingawo"
+
+#: .\templates\base\dashboaard.html:14 .\templates\base\dashboaard.html:24
+#: .\templates\persons\missing_person_form.html:23
+msgid "Delete"
+msgstr "Simula"
+
+#: .\templates\base\landing.html:39
+msgid "WELCOME TO LOST & FOUND"
+msgstr "TUKWANILIZA KU BIBUZE NE BIZULWA"
+
+#: .\templates\base\landing.html:45
+msgid "Search"
+msgstr "Nonya"
+
+#: .\templates\base\landing.html:51
+msgid "Age Filter"
+msgstr "Kungunuta Emyaka"
+
+#: .\templates\base\landing.html:53
+msgid "INFANTS"
+msgstr "Muwele"
+
+#: .\templates\base\landing.html:54
+msgid "TODDLER"
+msgstr "Bato"
+
+#: .\templates\base\landing.html:55
+msgid "CHILDHOOD"
+msgstr "Bato"
+
+#: .\templates\base\landing.html:56
+msgid "TEENAGER"
+msgstr "Buvubuka"
+
+#: .\templates\base\landing.html:57
+msgid "IN 20'S"
+msgstr "Myaka 20"
+
+#: .\templates\base\landing.html:58
+msgid "IN 30'S"
+msgstr "Myaka 30"
+
+#: .\templates\base\landing.html:59
+msgid "IN 40'S"
+msgstr "Myaka 40"
+
+#: .\templates\base\landing.html:60
+msgid "SENIOR"
+msgstr "Bakade"
+
+#: .\templates\base\landing.html:65
+#, fuzzy
+#| msgid "Age Filter"
+msgid "Body Filter"
+msgstr "Kungunuta Emyaka"
+
+#: .\templates\base\landing.html:67
+msgid "SLENDER"
+msgstr "MUTONO"
+
+#: .\templates\base\landing.html:68
+msgid "MUSCULAR"
+msgstr "WAMIFUMBI"
+
+#: .\templates\base\landing.html:69
+msgid "AVERAGE"
+msgstr "MUNENE"
+
+#: .\templates\base\landing.html:74
+msgid "Skin Color Filter"
+msgstr "Kungunuta Langi Yomubiri"
+
+#: .\templates\base\landing.html:76
+msgid "DARK"
+msgstr "MUDUGAVU"
+
+#: .\templates\base\landing.html:77
+msgid "CHOCOLATE"
+msgstr "KATAKETAKE"
+
+#: .\templates\base\landing.html:78
+msgid "LIGHT SKIN"
+msgstr "MWELU"
+
+#: .\templates\base\landing.html:79
+msgid "WHITE"
+msgstr "MUZUNGU"
+
+#: .\templates\base\landing.html:100
+msgid "hello"
+msgstr "gyebale"
+
+#: .\templates\base\landing.html:102
+msgid "you are"
+msgstr "oli"
+
+#: .\templates\base\landing.html:104
+msgid "Dashboard"
+msgstr "Meza yo"
+
+#: .\templates\base\landing.html:114
+msgid "SIGNUP"
+msgstr "KOLA EKIBANJAKYO"
+
+#: .\templates\base\landing.html:118
+msgid "LOGIN"
+msgstr "YINGILA EKIBANJAKYO"
+
+#: .\templates\base\landing.html:130
+msgid "MISSING PEOPLE"
+msgstr "ABANTU ABABUZE"
+
+#: .\templates\persons\missing_person_details.html:3
+msgid "Details for"
+msgstr "Ebikwata ku"
+
+#: .\templates\persons\missing_person_details.html:17
+msgid "AGE RANGE"
+msgstr "WAKATI WE MYAKA"
+
+#: .\templates\persons\missing_person_details.html:18
+msgid "HEIGHT"
+msgstr "BUWANVU"
+
+#: .\templates\persons\missing_person_details.html:19
+msgid "BODY BUILD"
+msgstr "OMUBILI"
+
+#: .\templates\persons\missing_person_details.html:20
+msgid "SKIN COLOUR"
+msgstr "LANGI YO MUBILI"
+
+#: .\templates\persons\missing_person_details.html:21
+msgid "RACE"
+msgstr "EGGWANGA"
+
+#: .\templates\persons\missing_person_details.html:22
+msgid "LAST SEEN"
+msgstr "YAKOMA KULABWA"
+
+#: .\templates\persons\missing_person_details.html:23
+msgid "SPOKEN LANGUAGES"
+msgstr "AYOGELA ENINI"
+
+#: .\templates\persons\missing_person_details.html:31
+msgid "DISTINGUISHING FEATURES"
+msgstr "EBIMWAWULA KUMUBILI"
+
+#: .\templates\persons\missing_person_details.html:39
+msgid "AOB"
+msgstr "EBITALEKEKA"
+
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Add"
+msgstr "Gatako"
+
+#: .\templates\persons\missing_person_form.html:5
+#: .\templates\persons\missing_person_form.html:12
+msgid "Person"
+msgstr "Omuntu"
+
+#: .\templates\persons\missing_person_form.html:17
+msgid "Images"
+msgstr "Ebifananyi"
